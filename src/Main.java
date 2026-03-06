@@ -1,6 +1,5 @@
-import java.util.Stack;
-import java.util.Queue;
-import java.util.LinkedList;
+import java.util.Deque;
+import java.util.ArrayDeque;
 
 public class Main {
     public static void main(String[] args) {
@@ -9,21 +8,21 @@ public class Main {
 
         String word = "madam";
 
-        Stack<Character> stack = new Stack<>();
-        Queue<Character> queue = new LinkedList<>();
+        Deque<Character> deque = new ArrayDeque<>();
 
-        // Insert characters into stack and queue
+        // Insert characters into deque
         for (int i = 0; i < word.length(); i++) {
-            char ch = word.charAt(i);
-            stack.push(ch);     // LIFO
-            queue.add(ch);      // FIFO
+            deque.add(word.charAt(i));
         }
 
         boolean isPalindrome = true;
 
-        // Compare queue (FIFO) and stack (LIFO)
-        while (!stack.isEmpty()) {
-            if (stack.pop() != queue.remove()) {
+        // Compare front and rear characters
+        while (deque.size() > 1) {
+            char first = deque.removeFirst();
+            char last = deque.removeLast();
+
+            if (first != last) {
                 isPalindrome = false;
                 break;
             }
