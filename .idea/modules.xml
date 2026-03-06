@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+<<<<<<< HEAD
+      <module fileurl="file://$PROJECT_DIR$/PalindromeChecker.iml" filepath="$PROJECT_DIR$/PalindromeChecker.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/App/App.iml" filepath="$PROJECT_DIR$/App/App.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/PalindromeCheckerApp.iml" filepath="$PROJECT_DIR$/.idea/PalindromeCheckerApp.iml" />
+>>>>>>> a67904c553ade94a5a53d7381d7c7ca96c738c4d
+    </modules>
+  </component>
+</project>
