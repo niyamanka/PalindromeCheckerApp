@@ -1,12 +1,11 @@
 public class Main {
-
     public static void main(String[] args) {
 
         System.out.println("Welcome to Palindrome Checker");
 
         String word = "A man a plan a canal Panama";
 
-        // Normalize string (remove spaces and convert to lowercase)
+        // String preprocessing
         String cleaned = word.replaceAll("\\s+", "").toLowerCase();
 
         boolean isPalindrome = true;
