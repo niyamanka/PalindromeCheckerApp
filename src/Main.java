@@ -3,14 +3,28 @@ public class Main {
 
         System.out.println("Welcome to Palindrome Checker");
 
-        String word = "level";
-        String reversed = "";
+        String word = "madam";
 
-        for (int i = word.length() - 1; i >= 0; i--) {
-            reversed = reversed + word.charAt(i);
+        // Convert string to character array
+        char[] chars = word.toCharArray();
+
+        boolean isPalindrome = true;
+
+        // Two-pointer technique
+        int start = 0;
+        int end = chars.length - 1;
+
+        while (start < end) {
+            if (chars[start] != chars[end]) {
+                isPalindrome = false;
+                break;
+            }
+            start++;
+            end--;
         }
 
-        if (word.equals(reversed)) {
+        // Display result
+        if (isPalindrome) {
             System.out.println(word + " is a Palindrome");
         } else {
             System.out.println(word + " is not a Palindrome");
