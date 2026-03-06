@@ -1,13 +1,18 @@
 public class Main {
+
     public static void main(String[] args) {
 
         System.out.println("Welcome to Palindrome Checker");
 
-        String word = "A man a plan a canal Panama";
+        String word = "madam";
 
-        PalindromeChecker checker = new PalindromeChecker();
+        // Choose algorithm dynamically
+        PalindromeStrategy strategy = new StackStrategy();
+        // PalindromeStrategy strategy = new DequeStrategy();
 
-        boolean result = checker.checkPalindrome(word);
+        PalindromeService service = new PalindromeService(strategy);
+
+        boolean result = service.check(word);
 
         if (result) {
             System.out.println(word + " is a Palindrome");
